@@ -49,7 +49,7 @@ public class NumbersTest {
     public void random4Test(){
         //: Given
         Numbers numbers = new Numbers();
-        String expected = "random4()\n*** Output ***\n"
+        String expected = "random4()\n*** Output ***\n";
 
         //: When
 
@@ -59,19 +59,27 @@ public class NumbersTest {
     @Test
     public void evenTest(){
         //: Given
+        Numbers numbers = new Numbers();
+        String expected = "even()\n*** Output ***\n2\n4\n6\n8\n10\n12\n14\n16\n18";
 
         //: When
+        String actual = numbers.even(20);
 
         //: Then
+        Assert.assertEquals("The two strings should be equal", expected, actual);
     }
 
     @Test
     public void powersTest(){
         //: Given
+        Numbers numbers = new Numbers();
+        String expected = "powers()\n*** Output ***\n2\n4\n8\n16\n32\n64\n128\n256";
 
         //: When
+        String actual = numbers.powers(8);
 
         //: Then
+        Assert.assertEquals("The two strings should be equal", expected, actual);
     }
 
 }

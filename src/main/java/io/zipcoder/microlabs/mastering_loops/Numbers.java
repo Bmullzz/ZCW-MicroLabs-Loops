@@ -6,6 +6,7 @@ public class Numbers {
 
 
     public String oneToTen() {
+
         String numStart = "*** Output ***\noneToTen()\n";
         String numList = "";
 
@@ -21,6 +22,7 @@ public class Numbers {
     }
 
     public String oddNumbers() {
+
         String numStart = "oddNumbers()\n*** Output ***\n";
         String numList = "";
 
@@ -36,6 +38,7 @@ public class Numbers {
     }
 
     public String squares() {
+
         String numStart = "squares()\n*** Output ***\n";
         String numList = "";
 
@@ -57,7 +60,6 @@ public class Numbers {
 
         String numStart = "random4()\n*** Output ***\n";
         String numList = "";
-        //int num = random.nextInt(10) + 1;
 
         for (int i = 1; i <= 4; i++){
             int num = random.nextInt(10) + 1;
@@ -76,11 +78,40 @@ public class Numbers {
 
     public String even(int n) {
 
-        return "";
+        String numStart = "even()\n*** Output ***\n";
+        String numList = "";
+
+        for (int i = 2; i <= n-2; i+=2){
+
+            if(i < n-2){
+                numList = numList + Integer.toString(i) + "\n";
+            }
+            else{
+                numList = numList + Integer.toString(i);
+            }
+
+        }
+
+        return numStart + numList;
     }
 
     public String powers(int n) {
-        return "";
+
+        String numStart = "powers()\n*** Output ***\n";
+        String numList = "";
+
+        for (double i = 1; i <= n; i++){
+
+            if(i < n){
+                numList = numList + Double.toString(Math.pow(2,i)) + "\n";
+            }
+            else{
+                numList = numList + Double.toString(Math.pow(2,i));
+            }
+
+        }
+
+        return numStart + numList.replace(".0", "");
     }
 
 
@@ -88,7 +119,7 @@ public class Numbers {
     public static void main(String[] args) {
 
         Numbers numbers = new Numbers();
-        System.out.print(numbers.random4());
+        System.out.print(numbers.powers(8));
     }
 }
 
