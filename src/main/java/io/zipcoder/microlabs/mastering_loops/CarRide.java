@@ -16,16 +16,11 @@ public class CarRide {
 
             System.out.println("Are we there yet?");
             userInput = input.nextLine();
+            userInput = userInput.toLowerCase();
 
-            if(userInput.equals("yes")) break;
-            if(userInput.equals("Yes")) break;
-            if(userInput.equals("YES")) break;
-            if(userInput.equals("Yes!")) break;
-            if(userInput.equals("YES!")) break;
-            if(userInput.equals("Yes.")) break;
-            if(userInput.equals("Yea")) break;
-
-
+            if(userInput.contains("yes")) break;
+            if(userInput.contains("yeah")) break;
+            if(userInput.contains("we hurr")) break;
 
         }
 
