@@ -33,23 +33,19 @@ public class Shapes {
 
         String shapeStart = "tableSquare()\n*** Output ***\n";
         String shapeList = "";
+        int multiply;
 
-        for(int i=1; i<=4; i++){
-
-            if(i < 4){
-
-                shapeList = shapeList + "| " + i + " | " + i*2 + " | " +
-                        i*3 + " | " + i*4 + " |\n";
-
-            }
-            else{
-
-                shapeList = shapeList + "| " + i + " | " + i*2 + " | " +
-                        i*3 + " | " + i*4 + " |";
+        for(int i=1; i <= 4; i++){
+            shapeList += "\n";
+            for(int j =1; j <= 4; j++){
+                shapeList += "|";
+                multiply = i * j;
+                shapeList += (" " + multiply);
+                if (multiply <= 9) shapeList += " ";
+                else if (multiply <= 16) shapeList += "";
 
             }
-
-
+            shapeList += "|";
         }
 
 
@@ -57,11 +53,31 @@ public class Shapes {
     }
 
     public String tableSquares(int n){
-        return "";
+
+        String shapeStart = "tableSquares()\n*** Output ***\n";
+        String shapeList = "";
+        int multiply;
+
+        for(int i=1; i <= 4; i++){
+            shapeList += "\n";
+            for(int j =1; j <= 4; j++){
+                shapeList += "|";
+                multiply = i * j;
+                shapeList += (" " + multiply);
+                if (multiply <= 9) shapeList += " ";
+                else if (multiply <= 16) shapeList += "";
+
+            }
+            shapeList += "|";
+        }
+
+
+        return shapeStart + shapeList;
+
     }
 
     public static void main(String[] args) {
         Shapes shape = new Shapes();
-        System.out.println(shape.tableSquare());
+        System.out.println(shape.tableSquares(6));
     }
 }

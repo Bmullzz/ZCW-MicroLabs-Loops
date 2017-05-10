@@ -24,8 +24,8 @@ public class ShapesTest {
     @Test
     public void tableSquareTest(){
         Shapes shape = new Shapes();
-        String expected = "tableSquare()\n*** Output ***\n| 1 | 2 | 3 | 4 |\n| 2 | 4 | 6 | 8 |\n" +
-                "| 3 | 6 | 9 | 12 |\n| 4 | 8 | 12 | 16 |";
+        String expected = "tableSquare()\n*** Output ***\n\n| 1 | 2 | 3 | 4 |\n| 2 | 4 | 6 | 8 |\n" +
+                "| 3 | 6 | 9 | 12|\n| 4 | 8 | 12| 16|";
 
         //: When
         String actual = shape.tableSquare();
