@@ -31,25 +31,25 @@ public class Shapes {
 
     public String tableSquare(){
 
-        String shapeStart = "tableSquare()\n*** Output ***\n";
-        String shapeList = "";
+        String tableStart = "tableSquare()\n*** Output ***\n";
+        String tableList = "";
         int multiply;
 
         for(int i=1; i <= 4; i++){
-            shapeList += "\n";
+            tableList += "\n";
             for(int j =1; j <= 4; j++){
-                shapeList += "|";
+                tableList += "|";
                 multiply = i * j;
-                shapeList += (" " + multiply);
-                if (multiply <= 9) shapeList += " ";
-                else if (multiply <= 16) shapeList += "";
+                tableList += (" " + multiply);
+                if (multiply <= 9) tableList += " ";
+                else if (multiply <= 16) tableList += "";
 
             }
-            shapeList += "|";
+            tableList += "|";
         }
 
 
-        return shapeStart + shapeList;
+        return tableStart + tableList;
     }
 
     public String tableSquares(int n){
@@ -58,14 +58,19 @@ public class Shapes {
         String shapeList = "";
         int multiply;
 
-        for(int i=1; i <= 4; i++){
+        for(int i=1; i <= n; i++){
+
             shapeList += "\n";
-            for(int j =1; j <= 4; j++){
+
+            for(int j =1; j <= n; j++){
+
                 shapeList += "|";
                 multiply = i * j;
                 shapeList += (" " + multiply);
+
                 if (multiply <= 9) shapeList += " ";
-                else if (multiply <= 16) shapeList += "";
+
+                else if (multiply <= 1000) shapeList += "";
 
             }
             shapeList += "|";
