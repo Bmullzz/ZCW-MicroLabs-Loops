@@ -66,11 +66,20 @@ public class Shapes {
 
                 shapeList += "|";
                 multiply = i * j;
-                shapeList += (" " + multiply);
+                //shapeList += (" " + multiply);
 
-                if (multiply <= 9) shapeList += " ";
+                if (multiply <= 9){
 
-                else if (multiply <= 1000) shapeList += "";
+                    shapeList += " " + multiply + " ";
+                }
+
+                else if (multiply < 100) {
+                    shapeList += " " + multiply + "";
+                    //shapeList += "";
+                }
+                else{
+                    shapeList += "" + multiply + "";
+                }
 
             }
             shapeList += "|";
@@ -83,6 +92,6 @@ public class Shapes {
 
     public static void main(String[] args) {
         Shapes shape = new Shapes();
-        System.out.println(shape.tableSquares(6));
+        System.out.println(shape.tableSquares(15));
     }
 }

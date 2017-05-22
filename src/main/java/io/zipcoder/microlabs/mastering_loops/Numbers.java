@@ -114,6 +114,32 @@ public class Numbers {
         return numStart + numList.replace(".0", "");
     }
 
+    static String electionWinner(String[] votes) {
+
+        Map<String, Integer> voteMap = new HashMap<>();
+        int max = 0;
+
+        for (String vote: votes) {
+
+            if (voteMap.get(vote) == null) voteMap.put(vote, 1);
+
+            else {
+
+                int count = voteMap.get(vote)+1;
+                voteMap.put(vote, count);
+                max = Math.max(max, count);
+
+            }
+
+        }
+        List<String> results = new ArrayList<>();
+        for (Map.Entry<String, Integer> entry: voteMap.entrySet()) {
+            if (entry.getValue() == max) results.add(entry.getKey());
+        }
+        Collections.sort(results);
+        return results.get(results.size()-1);
+
+    }
 
 
     public static void main(String[] args) {

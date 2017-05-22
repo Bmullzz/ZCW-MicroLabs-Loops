@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class CarRideTest {
     @Test
-    public void triangleTest(){
+    public void carRideTest(){
         //: Given
         Shapes shape = new Shapes();
         String expected = "*** Output ***\noneToTen()\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10";
